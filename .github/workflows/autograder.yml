@@ -50,7 +50,7 @@ jobs:
 
     - name: Install R packages (styler, janitor)
       run: |
-        Rscript -e "pkgs <- c('styler','janitor'); \
+        Rscript -e "pkgs <- c('styler','janitor','text2vec','data.table','reshape2'); \
           missing <- setdiff(pkgs, rownames(installed.packages())); \
           if (length(missing)) install.packages(missing, repos='https://cloud.r-project.org')"
 
