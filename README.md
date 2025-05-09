@@ -1,4 +1,5 @@
 # a4-fp-repo
+<<<<<<< HEAD
 # The Topic Tug-of-War: Why LLMs Beat LDA at Making Sense of Conversations  
 *Yining Lu*
 
@@ -43,3 +44,14 @@ So which should we trust? In this case, the **LLM themes are more credible**. Th
 There are still caveats. LLM outputs depend heavily on prompting, and can be inconsistent or overconfident in labeling. But in this head-to-head, the evidence suggests that when it comes to classifying complex discussions, **LLMs aren’t just keeping up — they’re leading the conversation.**
 
 *Source data: [IETF Mail Archive](https://mailarchive.ietf.org/arch/)*
+=======
+
+![LDA vs LLM Topic Distribution](figs/llm_vs_lda_theme_comparison.png)  
+*Figure 1. The solid red line shows the proportion of documents assigned to each LDA topic, and the dashed blue line shows the proportion assigned to each LLM-derived theme. And there are documents not classified by both methods, which is shown in the center of the plot. The LDA curve is relatively smooth and flat while the LLM curve fluctuates more dramatically between different topics. This suggests that LLM may capture a wider variety of themes, but LDA distributes document assignments more evenly. *
+
+1. Our chart keeps the design simple by minimizing visual clutter and using only essential elements like lines and points.
+2. We arranged the topics in a V-shape: LDA topics are ordered from high to low, LLM topics are ordered from low to high, and they meet at a shared "Not Classified" point in the center to connect the two parts clearly.
+3. We used two different but soft colors to separate LDA and LLM results, making them easy to differeniate without being distracting.
+4. We connected the points with lines to make trends easy to follow and highlight the structural difference between LDA and LLM topic distributions.
+5. We used the same axis scales and clear labels so that it’s easy to compare the proportions across methods at a glance.
+>>>>>>> a895f958118da167b840eb568e963e7ba7aa6252
