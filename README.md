@@ -52,4 +52,3 @@ There are still caveats. LLM outputs depend heavily on prompting, and can be inc
 3. We used two different but soft colors to separate LDA and LLM results, making them easy to differeniate without being distracting.
 4. We connected the points with lines to make trends easy to follow and highlight the structural difference between LDA and LLM topic distributions.
 5. We used the same axis scales and clear labels so that it’s easy to compare the proportions across methods at a glance.
->>>>>>> a895f958118da167b840eb568e963e7ba7aa6252
