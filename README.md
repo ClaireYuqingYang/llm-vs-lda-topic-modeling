@@ -1,4 +1,3 @@
-# a4-fp-repo
 <<<<<<< HEAD
 # The Topic Tug-of-War: Why LLMs Beat LDA at Making Sense of Conversations  
 *Yining Lu, Claire Yuqing Yang*
