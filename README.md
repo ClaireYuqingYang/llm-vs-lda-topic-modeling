@@ -1,5 +1,4 @@
 # The Topic Tug-of-War: Why LLMs Beat LDA at Making Sense of Conversations  
-*Yining Lu, Claire Yuqing Yang*
 
 We don’t just work now - we message. Whether it's Slack threads, or email lists, most collaboration today happens in text. But those texts are messy with an overwhelming amounts, and ideas all mashed together. If you're building a classifier to summarize these conversations, you might reach for a tried-and-true method like Latent Dirichlet Allocation (LDA). But today, large language models (LLMs) offer an alternative — and they might just be winning.
 
