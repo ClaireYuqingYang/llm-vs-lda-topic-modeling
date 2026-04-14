@@ -1,6 +1,6 @@
 # Topic Modeling in Conversational Data: A Comparison of LDA and LLM-based Approaches
 
-Claire Yuqing Yang, Yining Lu, 2025-05
+*Claire Yuqing Yang, Yining Lu, 2025-05*
 
 Topic modeling is a widely used approach for summarizing large-scale textual data, including conversational corpora such as email threads and online discussions. Traditional methods such as Latent Dirichlet Allocation (LDA) rely on distributional patterns of words, which may limit their ability to capture higher-order semantic structure. Recent advances in large language models (LLMs) provide an alternative framework that incorporates contextual and semantic information. This project evaluates and compares LDA and LLM-based approaches for topic modeling in conversational data, focusing on differences in topic coherence, coverage, and semantic alignment.
 
