@@ -1,5 +1,7 @@
 # Topic Modeling in Conversational Data: A Comparison of LDA and LLM-based Approaches
 
+Claire Yuqing Yang, Yining Lu, 2025-05
+
 Topic modeling is a widely used approach for summarizing large-scale textual data, including conversational corpora such as email threads and online discussions. Traditional methods such as Latent Dirichlet Allocation (LDA) rely on distributional patterns of words, which may limit their ability to capture higher-order semantic structure. Recent advances in large language models (LLMs) provide an alternative framework that incorporates contextual and semantic information. This project evaluates and compares LDA and LLM-based approaches for topic modeling in conversational data, focusing on differences in topic coherence, coverage, and semantic alignment.
 
 To explore this, we analyzed 1,587 messages from the **main mailing list of the Internet Engineering Task Force (IETF)** — the international standards organization behind protocols like HTTP, DNS, and SMTP. These messages span a full year leading up to May 2025, real-time conversations on technical proposals, organizational governance, and meeting logistics. Unlike older or proprietary datasets (like the Enron corpus), the IETF archive is continuously updated and publicly accessible, making it a perfect snapshot of how modern technical teams communicate.
