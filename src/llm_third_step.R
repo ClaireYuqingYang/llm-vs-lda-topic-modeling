@@ -1,11 +1,11 @@
 library(tidyverse)
 library(ollamar)
 
-# ==== Step 1: 读取小主题 ====
+# ==== Step 1: Read small themes ====
 
-llm_themes <- read_csv("ietf_email_full_llm_themes.csv")  # 改成裸文件名
+llm_themes <- read_csv("ietf_email_full_llm_themes.csv")  # change to bare filename
 
-# ==== Step 2: 定义单条归类函数 ====
+# ==== Step 2: Define single-item classification function ====
 
 assign_big_theme <- function(single_theme) {
   chat <- chat_ollama(
@@ -33,7 +33,7 @@ Instructions:
   chat$chat(single_theme)
 }
 
-# ==== Step 3: 批量归类 ====
+# ==== Step 3: Batch classification ====
 
 batch_size <- 400
 n_batches <- ceiling(nrow(llm_themes) / batch_size)
@@ -47,16 +47,16 @@ for (i in 1:n_batches) {
       Big_Theme = map_chr(LLM_Themes, assign_big_theme, .progress = TRUE)
     )
   
-  write_csv(d_batch, paste0("ietf_email_bigtheme_batch_", i, ".csv"))  # 改成裸保存
+  write_csv(d_batch, paste0("ietf_email_bigtheme_batch_", i, ".csv"))  # save without data/ path
   
   cat("Batch", i, "completed.\n")
 }
 
-# ==== Step 4: 合并 ====
+# ==== Step 4: Merge ====
 
-file_list <- list.files(pattern = "ietf_email_bigtheme_batch_.*\\.csv$")  # 改成不带data/
+file_list <- list.files(pattern = "ietf_email_bigtheme_batch_.*\\.csv$")  # remove data/ prefix
 bigthemes_final <- file_list |> map_dfr(read_csv)
 
-write_csv(bigthemes_final, "ietf_email_full_llm_bigthemes.csv")  # 裸保存
+write_csv(bigthemes_final, "ietf_email_full_llm_bigthemes.csv")  # save to root directory
 
-cat("✅ 每封邮件大主题归类完成啦，保存到 'ietf_email_full_llm_bigthemes.csv'\n")
+cat("✅ Big theme classification for each email is complete, saved to 'ietf_email_full_llm_bigthemes.csv'\n")
